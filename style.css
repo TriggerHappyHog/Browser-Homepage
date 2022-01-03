@@ -64,8 +64,13 @@ h1, h2, h3, h4, p{
     transform: translate(-50%);
 }
 
+.linkBox div{
+    display: inline-block;
+}
+
 .linkBox img{
     width: 40px;
+    transition: .5s;
 }
 
 .r11, .r12, .r21, .r22, .r31, .r32{
@@ -74,4 +79,8 @@ h1, h2, h3, h4, p{
 
 .r11, .r12, .r13, .r21, .r22, .r23{
     margin-bottom: 15px;
+}
+
+.linkBox a:hover img{
+    transform: rotateY(360deg);
 }
