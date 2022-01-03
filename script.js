@@ -17,7 +17,7 @@ var trimmedDay = day.substring(0, dayLeng);
 
 cDate.innerHTML = trimmedDay;
 
-var weatherKey = "24c0f9ca369c9bf518cb17089064cc19";
+var weatherKey = config.WEATHER_API_KEY;
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?q=Manchester&units=metric&appid=" + weatherKey,
         type: "GET",
@@ -34,6 +34,7 @@ var weatherKey = "24c0f9ca369c9bf518cb17089064cc19";
         try {
             $("#cTemp").html(Math.round(data.main.temp) + "°");
             $("#cCity").html(data.name + ", " + data.sys.country);
+            $("#weatherIcon").attr("src", "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png")
         } catch (error) {
             $("#weatherBox").html("Error Caught: " + error);
         }
