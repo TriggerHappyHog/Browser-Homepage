@@ -1,11 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,400&display=swap');
 *{
     margin: 0;
 }
 
 html{
     background: #272643;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, p{
     margin: 0;
+}
+
+.time{
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 50px;
+    color: #f5f5f5;
+}
+
+.hour, .minute{
+    margin-left: 5px;
+    width: 80px;
+    height: 80px;
+    background: #f5f5f5;
+    box-shadow:
+        0 0 0 5px #272643,
+        0 0 0 7px #f5f5f5;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    color: #272643;
+}
+
+.hour h2, .minute h2, .time h2{
+    font-weight: lighter;
+}
+
+.minute{
+    margin-top: 20px;
+}
+
+.date h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#planet{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.linkBox{
+    position: absolute;
+    left: 50%;
+    bottom: 200px;
+    width: 167px;
+    height: 150px;
+    background: blue;
+    transform: translate(-50%);
 }

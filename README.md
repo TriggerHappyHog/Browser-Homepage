@@ -1,5 +1,5 @@
 # browser-homepage
- 
+
 LIST:
     time
     date
