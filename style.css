@@ -84,3 +84,23 @@ h1, h2, h3, h4, p{
 .linkBox a:hover img{
     transform: rotateY(360deg);
 }
+
+.weatherBox{
+    margin: 15px;
+    width: 150px;
+    height: 100px;
+}
+
+.weatherBox h2{
+    color: #f5f5f5;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.weatherBox img{
+    width: 30px;
+}
+
+#cTemp{
+    display: inline-block;
+}
