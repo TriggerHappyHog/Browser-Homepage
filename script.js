@@ -39,3 +39,5 @@ var weatherKey = config.WEATHER_API_KEY;
             $("#weatherBox").html("Error Caught: " + error);
         }
     }
+
+    onmousemove = function(e){$("#coord").html("X: " + e.clientX + " Y: " + e.clientY);}
