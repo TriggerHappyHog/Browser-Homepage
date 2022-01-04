@@ -116,3 +116,16 @@ h1, h2, h3, h4, p{
 .coordBox p{
     font-weight: lighter;
 }
+
+.weatherDetail{
+    width: 300px;
+    height: 200px;
+    background: #f5f5f5;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .time{
+        top: 140px
+    }
+  }
