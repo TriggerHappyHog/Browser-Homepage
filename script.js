@@ -35,6 +35,7 @@ var weatherKey = config.WEATHER_API_KEY;
             $("#cTemp").html(Math.round(data.main.temp) + "°");
             $("#cCity").html(data.name + ", " + data.sys.country);
             $("#weatherIcon").attr("src", "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png")
+            $("#cLongLat").html(data.coord.lat + " " + data.coord.lon);
         } catch (error) {
             $("#weatherBox").html("Error Caught: " + error);
         }
