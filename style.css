@@ -88,7 +88,7 @@ h1, h2, h3, h4, p{
 .weatherBox{
     margin: 15px;
     width: 150px;
-    height: 100px;
+    transition: .5ms;
 }
 
 .weatherBox h2{
@@ -99,6 +99,20 @@ h1, h2, h3, h4, p{
 
 .weatherBox img{
     width: 30px;
+}
+
+.weatherBox:hover .weatherDetail{
+    opacity:100%;
+    transition:opacity 0.5s
+}
+
+.weatherDetail{
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    transition: .5ms;
+    opacity: 0;
+    border: 1px solid #f5f5f563;
 }
 
 #cTemp{
@@ -117,15 +131,10 @@ h1, h2, h3, h4, p{
     font-weight: lighter;
 }
 
-.weatherDetail{
-    width: 300px;
-    height: 200px;
-    background: #f5f5f5;
-    margin: 10px;
-}
-
 @media only screen and (max-width: 600px) {
     .time{
         top: 140px
     }
   }
+
+/* ANIMATION */
