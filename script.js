@@ -36,6 +36,12 @@ var weatherKey = config.WEATHER_API_KEY;
             $("#cCity").html(data.name + ", " + data.sys.country);
             $("#weatherIcon").attr("src", "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png")
             $("#cLongLat").html(data.coord.lat + " " + data.coord.lon);
+            $("#fl").html(data.main.feels_like);
+            $("#temp").html(data.main.temp);
+            $("#tmin").html(data.main.temp_min);
+            $("#tmax").html(data.main.temp_max);
+            $("#pressure").html(data.main.pressure);
+            $("#humidity").html(data.main.humidity);
         } catch (error) {
             $("#weatherBox").html("Error Caught: " + error);
         }
