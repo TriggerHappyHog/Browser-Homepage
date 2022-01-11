@@ -64,10 +64,6 @@ h1, h2, h3, h4, p{
     transform: translate(-50%);
 }
 
-.linkBoxInner{
-    /* width: 100%; */
-}
-
 .linkBox a{
     display: inline-block;
 }
