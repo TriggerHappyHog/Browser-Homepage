@@ -1,16 +1,25 @@
-var today = new Date();
-var hour = today.getHours();
-var minute = today.getMinutes();
-
+var today;
+var hour;
+var minute;
 var cHour = document.getElementById("hourh2");
 var cMinute = document.getElementById("minuteh2");
 var cDate = document.getElementById("dateh2");
 
-//Set time
-cHour.innerHTML = hour;
-cMinute.innerHTML = minute;
-
+function setClock(){
+    setTimeout(function(){
+        //Get Time
+        today = new Date();
+        hour = today.getHours();
+        minute = today.getMinutes();
+        //Set time
+        cHour.innerHTML = hour;
+        cMinute.innerHTML = minute;
+        setClock()
+    }, 1000);
+}
+setClock(); 
 //Trim Day
+today = new Date();
 var day = today.toString();
 var dayLeng = 10;
 var trimmedDay = day.substring(0, dayLeng);
