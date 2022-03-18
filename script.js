@@ -26,6 +26,22 @@ var trimmedDay = day.substring(0, dayLeng);
 
 cDate.innerHTML = trimmedDay;
 
+function ipLookUp () {
+    $.ajax('http://ip-api.com/json')
+    .then(
+        function success(response) {
+            console.log('User\'s Location Data is ', response);
+            console.log('User\'s Country', response.country);
+        },
+  
+        function fail(data, status) {
+            console.log('Request failed.  Returned status of',
+                        status);
+        }
+    );
+  }
+  ipLookUp()
+
 var weatherKey = config.WEATHER_API_KEY;
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?q=Manchester&units=metric&appid=" + weatherKey,
