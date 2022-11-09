@@ -4,6 +4,8 @@ var minute;
 var cHour = document.getElementById("hourh2");
 var cMinute = document.getElementById("minuteh2");
 var cDate = document.getElementById("dateh2");
+var latCoord;
+var longCoord;
 
 function setClock(){
     setTimeout(function(){
@@ -26,25 +28,30 @@ var trimmedDay = day.substring(0, dayLeng);
 
 cDate.innerHTML = trimmedDay;
 
-function ipLookUp () {
-    $.ajax('http://ip-api.com/json')
-    .then(
-        function success(response) {
-            console.log('User\'s Location Data is ', response);
-            console.log('User\'s Country', response.country);
-        },
-  
-        function fail(data, status) {
-            console.log('Request failed.  Returned status of',
-                        status);
-        }
-    );
+if ("geolocation" in navigator) {
+    // check if geolocation is supported/enabled on current browser
+    navigator.geolocation.getCurrentPosition(
+     function success(position) {
+       // for when getting location is a success
+       console.log('latitude', position.coords.latitude, 
+                   'longitude', position.coords.longitude);
+        latCoord = position.coords.latitude;
+        longCoord = position.coords.longitude;
+        console.log(position);
+     },
+    function error(error_message) {
+      // for when getting location results in an error
+      console.error('An error has occured while retrieving location', error_message)
+    });
+  } else {
+    // geolocation is not supported
+    // get your location some other way
+    console.log('geolocation is not enabled on this browser')
   }
-  ipLookUp()
 
 var weatherKey = config.WEATHER_API_KEY;
     $.ajax({
-        url: "https://api.openweathermap.org/data/2.5/weather?q=Manchester&units=metric&appid=" + weatherKey,
+        url: "https://api.openweathermap.org/data/2.5/weather?lat=" + latCoord + "&lon=" + longCoord + "&appid=" + weatherKey,
         type: "GET",
         success: function (result){
             console.log(result);
