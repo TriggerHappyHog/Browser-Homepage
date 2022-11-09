@@ -51,15 +51,12 @@ if ("geolocation" in navigator) {
     console.log('geolocation is not enabled on this browser')
   }
 
-  console.log("LAT " + latCoord);
-  console.log("LONG " + longCoord);
-
   function getWeather(){
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?lat=" + latCoord + "&lon=" + longCoord + "&appid=" + weatherKey,
         type: "GET",
         success: function (result){
-            console.log("Openweathermap: " + result);
+            console.log("Openweathermap: " + JSON. stringify(result));
             weatherResult(result);
         },
         error: function(error) {
