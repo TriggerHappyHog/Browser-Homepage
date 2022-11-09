@@ -6,6 +6,7 @@ var cMinute = document.getElementById("minuteh2");
 var cDate = document.getElementById("dateh2");
 var latCoord;
 var longCoord;
+var weatherKey = config.WEATHER_API_KEY;
 
 function setClock(){
     setTimeout(function(){
@@ -38,6 +39,7 @@ if ("geolocation" in navigator) {
         latCoord = position.coords.latitude;
         longCoord = position.coords.longitude;
         console.log(position);
+        getWeather();
      },
     function error(error_message) {
       // for when getting location results in an error
@@ -49,7 +51,10 @@ if ("geolocation" in navigator) {
     console.log('geolocation is not enabled on this browser')
   }
 
-var weatherKey = config.WEATHER_API_KEY;
+  console.log("LAT " + latCoord);
+  console.log("LONG " + longCoord);
+
+  function getWeather(){
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?lat=" + latCoord + "&lon=" + longCoord + "&appid=" + weatherKey,
         type: "GET",
@@ -61,7 +66,7 @@ var weatherKey = config.WEATHER_API_KEY;
             console.log(error);
         }
     })
-
+  }
     function weatherResult(data){
         try {
             $("#cTemp").html(Math.round(data.main.temp) + "°");
@@ -79,4 +84,5 @@ var weatherKey = config.WEATHER_API_KEY;
         }
     }
 
-    onmousemove = function(e){$("#coord").html("X: " + e.clientX + " Y: " + e.clientY);}
+    onmousemove = function(e){$("#coord").html("X: " + e.clientX + " Y: " + e.clientY);
+}
