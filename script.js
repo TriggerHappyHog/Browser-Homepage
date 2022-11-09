@@ -54,7 +54,7 @@ var weatherKey = config.WEATHER_API_KEY;
         url: "https://api.openweathermap.org/data/2.5/weather?lat=" + latCoord + "&lon=" + longCoord + "&appid=" + weatherKey,
         type: "GET",
         success: function (result){
-            console.log(result);
+            console.log("Openweathermap: " + result);
             weatherResult(result);
         },
         error: function(error) {
