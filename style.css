@@ -98,11 +98,11 @@ h1, h2, h3, h4, p{
 
 .weatherBox h2, h3{
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 2rem;
 }
 
 .weatherBox h3{
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .weatherBox img{
@@ -125,19 +125,20 @@ h1, h2, h3, h4, p{
 }
 
 #cTemp{
-    font-size: 24px;
+    font-size: 2rem;
     display: inline-block;
 }
 
 .coordBox{
     color: #f5f5f5;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1rem;
+    right: 2rem;
 }
 
 .coordBox p{
     font-weight: lighter;
+    font-size: 2rem;
 }
 
 .hidden-links{
