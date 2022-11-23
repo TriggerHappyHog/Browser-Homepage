@@ -53,7 +53,7 @@ if ("geolocation" in navigator) {
 
   function getWeather(){
     $.ajax({
-        url: "https://api.openweathermap.org/data/2.5/weather?lat=" + latCoord + "&lon=" + longCoord + "&appid=" + weatherKey,
+        url: "https://api.openweathermap.org/data/2.5/weather?lat=" + latCoord + "&lon=" + longCoord + "&appid=" + weatherKey + "&units=metric",
         type: "GET",
         success: function (result){
             console.log("Openweathermap: " + JSON. stringify(result));
