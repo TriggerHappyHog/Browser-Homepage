@@ -79,6 +79,7 @@ h1, h2, h3, h4, p{
     display: grid;
     grid-template-columns: 50px 50px 50px 50px;
     gap: 5px;
+    text-align: center;
 }
 
 /* .r11, .r12, .r21, .r22, .r31, .r32{
