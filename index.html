@@ -1,73 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage by Ethan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imgs/icons/planetpng.png" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="imgs/icons/planetpng.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!-- WEATHER -->
     <div class="weatherBox">
-        <h2 id="cTemp">6°</h2>
-        <img id="weatherIcon" src="" alt="" srcset="">
-        <h2 id="cCity">Manchester</h2>
-        <h3 id="cLongLat"></h3>
-        <div class="weatherDetail">
-            <h3>Feels Like: <span id="fl"></span>°</h3>
-            <h3>Temp: <span id="temp"></span>°</h3>
-            <h3>Temp_min: <span id="tmin"></span>°</h3>
-            <h3>Temp-max: <span id="tmax"></span>°</h3>
-            <h3>Pressure: <span id="pressure"></span></h3>
-            <h3>Humidity: <span id="humidity"></span>%</h3>
-        </div>
+      <h2 id="cTemp">6°</h2>
+      <img id="weatherIcon" src="" alt="" srcset="" />
+      <h2 id="cCity">Manchester</h2>
+      <h3 id="cLongLat"></h3>
+      <div class="weatherDetail">
+        <h3>Feels Like: <span id="fl"></span>°</h3>
+        <h3>Temp: <span id="temp"></span>°</h3>
+        <h3>Temp_min: <span id="tmin"></span>°</h3>
+        <h3>Temp-max: <span id="tmax"></span>°</h3>
+        <h3>Pressure: <span id="pressure"></span></h3>
+        <h3>Humidity: <span id="humidity"></span>%</h3>
+      </div>
     </div>
 
     <!-- COORDS -->
     <div class="coordBox">
-        <p id="coord"></p>
+      <p id="coord"></p>
     </div>
 
     <!-- DATE TIME -->
     <div class="time">
-        <div class="date">
-            <h2 id="dateh2">Mon 31 Jan</h2>    
-        </div>
-        <div class="hour">
-            <!-- &nbsp; -->
-            <h2 id="hourh2">13</h2>
-        </div>
-        <div class="minute">
-            <!-- &nbsp;-->
-            <h2 id="minuteh2">44</h2>
-        </div>
+      <div class="date">
+        <h2 id="dateh2">Mon 31 Jan</h2>
+      </div>
+      <div class="hour">
+        <!-- &nbsp; -->
+        <h2 id="hourh2">13</h2>
+      </div>
+      <div class="minute">
+        <!-- &nbsp;-->
+        <h2 id="minuteh2">44</h2>
+      </div>
     </div>
-    <a href="https://goofy-bartik-64f2d5.netlify.app/nasa" target="_blank"><img id="planet" src="imgs/planet_.svg" alt=""></a>
+    <a href="https://goofy-bartik-64f2d5.netlify.app/nasa" target="_blank"
+      ><img id="planet" src="imgs/planet_.svg" alt=""
+    /></a>
     <div class="linkBox">
-        <div class="linkBoxInner">
-            <a href="https://www.youtube.com/"><div><img class="r22" src="imgs/icons/001-youtube.png" alt=""></div></a>
-            <a href="https://drive.google.com/drive/my-drive"><div><img class="r31" src="imgs/icons/007-google-drive.png" alt=""></div></a>
-            <a href="https://www.google.co.uk/"><div><img class="r32" src="imgs/icons/google.png" alt=""></div></a>
-            <a href="https://mail.google.com/mail/u/0/#inbox"><div><img class="r33" src="imgs/icons/gmail.png" alt=""></div></a>
-            <a href="https://web.whatsapp.com/"><div class=""><img class="r11" src="imgs/icons/008-whatsapp.png" alt="" srcset=""></div></a>
-            <a href="https://twitter.com/home"><div class=""><img class="r12" src="imgs/icons/002-twitter.png" alt=""></div></a>
-            <a href="https://www.reddit.com/r/webdev/"><div><img class="r21" src="imgs/icons/004-reddit.png" alt=""></div></a>
-            <a href="https://www.twitch.tv/"><div class=""><img class="r13" src="imgs/icons/003-twitch.png" alt=""></div></a>
-            <a href="https://github.com/TriggerHappyHog"><div><img class="r23" src="imgs/icons/006-github.png" alt=""></div></a>
-            <a href="https://stackoverflow.com/"><div><img class="r23" src="imgs/icons/stack-overflow.png" alt=""></div></a>
-            <a href="https://www.figma.com/files/recent?fuid=991259299998317807"><div><img class="r23" src="imgs/icons/figma.png" alt=""></div></a>
-            <a href="https://www.binance.com/en/my/wallet/account/overview"><div><img class="r23" src="imgs/icons/binance.png" alt=""></div></a>
-            <a href="https://opensea.io/OmnioniNFT"><div><img class="r23" src="imgs/icons/opensea.png" alt=""></div></a>
-            <a href="https://coinmarketcap.com/"><div><img class="r23" src="imgs/icons/CoinMarketCap_Logo.png" alt=""></div></a>
-        </div>
+      <div class="linkBoxInner">
+        <a href="https://www.youtube.com/"
+          ><div><img class="r22" src="imgs/icons/001-youtube.png" alt="" /></div
+        ></a>
+        <a href="https://drive.google.com/drive/my-drive"
+          ><div>
+            <img
+              class="r31"
+              src="imgs/icons/007-google-drive.png"
+              alt=""
+            /></div
+        ></a>
+        <a href="https://www.google.co.uk/"
+          ><div><img class="r32" src="imgs/icons/google.png" alt="" /></div
+        ></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox"
+          ><div><img class="r33" src="imgs/icons/gmail.png" alt="" /></div
+        ></a>
+        <a href="https://web.whatsapp.com/"
+          ><div class="">
+            <img
+              class="r11"
+              src="imgs/icons/008-whatsapp.png"
+              alt=""
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://twitter.com/home"
+          ><div class="">
+            <img class="r12" src="imgs/icons/002-twitter.png" alt="" /></div
+        ></a>
+        <a href="https://www.reddit.com/r/webdev/"
+          ><div><img class="r21" src="imgs/icons/004-reddit.png" alt="" /></div
+        ></a>
+        <a href="https://www.twitch.tv/"
+          ><div class="">
+            <img class="r13" src="imgs/icons/003-twitch.png" alt="" /></div
+        ></a>
+        <a href="https://github.com/TriggerHappyHog"
+          ><div><img class="r23" src="imgs/icons/006-github.png" alt="" /></div
+        ></a>
+        <a href="https://stackoverflow.com/"
+          ><div>
+            <img class="r23" src="imgs/icons/stack-overflow.png" alt="" /></div
+        ></a>
+        <a href="https://www.figma.com/files/recent?fuid=991259299998317807"
+          ><div><img class="r23" src="imgs/icons/figma.png" alt="" /></div
+        ></a>
+        <a href="https://www.binance.com/en/my/wallet/account/overview"
+          ><div><img class="r23" src="imgs/icons/binance.png" alt="" /></div
+        ></a>
+        <a href="https://opensea.io/OmnioniNFT"
+          ><div><img class="r23" src="imgs/icons/opensea.png" alt="" /></div
+        ></a>
+        <a href="https://coinmarketcap.com/"
+          ><div>
+            <img
+              class="r23"
+              src="imgs/icons/CoinMarketCap_Logo.png"
+              alt=""
+            /></div
+        ></a>
+      </div>
     </div>
     <div class="hidden-links">
-        <a href="https://goofy-bartik-64f2d5.netlify.app/pokemon" target="_blank"><div class=""><img src="imgs/icons/pokeball.png" alt=""></div></a>
+      <a href="https://goofy-bartik-64f2d5.netlify.app/pokemon" target="_blank"
+        ><div class=""><img src="imgs/icons/pokeball.png" alt="" /></div
+      ></a>
     </div>
     <!-- SCRIPT BELOW -->
-    <script type='text/javascript' src='config.js'></script>
+    <script type="text/javascript" src="config.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
