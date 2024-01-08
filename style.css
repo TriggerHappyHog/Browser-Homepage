@@ -4,9 +4,31 @@
 }
 
 html{
-    background: #272643;
+    background: rgb(131, 50, 107);
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    background: linear-gradient(-45deg, #703b2b, #741f3f, #13566e, #126d58);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* #3e3aad */
 
 h1, h2, h3, h4, p{
     margin: 0;
